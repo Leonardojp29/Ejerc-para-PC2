@@ -1,4 +1,6 @@
 package com.cibertec.cibertec.entity;
+
+import java.math.BigDecimal;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -12,16 +14,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "cliente")
-public class Cliente {
+@Table(name = "producto")
+public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idcliente;
-    private String nombres;
-    private String dni;
-    private Date fechaNacimiento;
+    private int idProducto;
+    private String nombre;
+    private BigDecimal precio;
+    private int stock;
+    private Date fechaVencimiento;
 
-
-   
 }
